@@ -13,7 +13,7 @@ const rhtasset = document.querySelector('.rhtasset');
 
 
 
-checkingHour = 19;
+checkingHour = 14;
 banglaArr = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
 dateCalculation();
 setInterval(dateCalculation, 1000);
@@ -24,7 +24,8 @@ function dateCalculation() {
     let hours = d.getHours();
     let minutes = d.getMinutes();
     let seconds = d.getSeconds();
-    console.log(hours,minutes,seconds);
+    var offset = d.getTimezoneOffset();
+    console.log(hours,minutes,seconds,offset);
     if (checkingHour == hours) {
         hideSlide1();
     } else {
