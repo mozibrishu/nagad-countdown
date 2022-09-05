@@ -13,7 +13,7 @@ const rhtasset = document.querySelector('.rhtasset');
 
 
 
-checkingHour = 14;
+checkingHour = 19;
 banglaArr = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
 dateCalculation();
 setInterval(dateCalculation, 1000);
