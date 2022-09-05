@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 300px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg1{
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+}
+
+.asset1{
+    top: 0px;
+    left: 0px;
+}
+.asset2{
+    top: 0px;
+    left: 0px;
+}
+
+
+
+
+
+
+/* Utility */
+.hidden{
+    display: none;
+}
+.absolute{
+    position: absolute;
+}
+
+
+/* Animation */
+.asset1-animation{
+    animation: asset1 8s linear infinite;
+}
+
+@keyframes asset1 {
+    0%,100%{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    16%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    66%{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+}
+
+.asset2-animation{
+    animation: asset2 8s linear infinite;
+}
+
+@keyframes asset2 {
+    0%,100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    16%{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    66%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
