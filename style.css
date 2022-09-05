@@ -16,7 +16,12 @@ body,html{
     top: 0;
     left: 0;
 }
-
+.bg2{
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+}
 .asset1{
     top: 0px;
     left: 0px;
@@ -26,10 +31,38 @@ body,html{
     left: 0px;
 }
 
+.offerbase{
+    top: 0px;
+    left: 0px;
+}
+.ofertaka{
+    top: 0px;
+    left: 0px;
+}
 
+.hoursText{
+    top: 166px;
+    left: 44px;
+    color: black;
+    font-size: 31px;
+    font-weight: 900;
+}
 
+.minutesText{
+    top: 166px;
+    left: 134px;
+    color: black;
+    font-size: 31px;
+    font-weight: 900;
+}
 
-
+.secondsText{
+    top: 166px;
+    left: 214px;
+    color: black;
+    font-size: 31px;
+    font-weight: 900;
+}
 
 /* Utility */
 .hidden{
