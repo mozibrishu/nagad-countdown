@@ -7,11 +7,13 @@ const asset1 = document.querySelector('.asset1');
 const asset2 = document.querySelector('.asset2');
 const offerbase = document.querySelector('.offerbase');
 const ofertaka = document.querySelector('.ofertaka');
+const cashbackcopy = document.querySelector('.cashbackcopy');
+const lftasset = document.querySelector('.lftasset');
+const rhtasset = document.querySelector('.rhtasset');
 
 
 
-
-checkingHour = 13;
+checkingHour = 19;
 banglaArr = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
 dateCalculation();
 setInterval(dateCalculation, 1000);
@@ -22,9 +24,11 @@ function dateCalculation() {
     let hours = d.getHours();
     let minutes = d.getMinutes();
     let seconds = d.getSeconds();
+    console.log(hours,minutes,seconds);
     if (checkingHour == hours) {
         hideSlide1();
     } else {
+        displaySlide1();
         checkRemainingTime(hours, minutes, seconds);
     }
 }
@@ -75,7 +79,25 @@ function hideSlide1() {
     bg2.classList.remove('hidden');
     offerbase.classList.remove('hidden');
     ofertaka.classList.remove('hidden');
+    cashbackcopy.classList.remove('hidden');
+    lftasset.classList.remove('hidden');
+    rhtasset.classList.remove('hidden');
 
+}
 
+function displaySlide1() {
+    hoursText.classList.remove('hidden');
+    minutesText.classList.remove('hidden');
+    secondsText.classList.remove('hidden');
+    bg1.classList.remove('hidden');
+    asset1.classList.remove('hidden');
+    asset2.classList.remove('hidden');
+
+    bg2.classList.add('hidden');
+    offerbase.classList.add('hidden');
+    ofertaka.classList.add('hidden');
+    cashbackcopy.classList.add('hidden');
+    lftasset.classList.add('hidden');
+    rhtasset.classList.add('hidden');
 
 }
