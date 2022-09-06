@@ -40,13 +40,20 @@ function dateCalculation() {
 function checkRemainingTime(hours, minutes, seconds) {
 
     remainingSeconds = seconds == 0 ? 0 : 60 - seconds;
-    remainingMinutes = remainingSeconds == 0 ? 60 - minutes : (60 - 1) - minutes;
+    if (remainingSeconds == 0) {
+        if (minutes == 0) {
+            remainingMinutes = 0;
+        }
+        else {
+            remainingMinutes = 60 - minutes;
+        }
+    } else { remainingMinutes = (60 - 1) - minutes }``
 
     calcRemainingHours = () => {
         if (hours < checkingHour) {
-            return remainingMinutes == 0 ? checkingHour - hours : (checkingHour - 1) - hours;
+            return remainingMinutes == 0 && minutes == 0 ? checkingHour - hours : (checkingHour - 1) - hours;
         } else {
-            return remainingMinutes == 0 ? checkingHour + (24 - hours) : (checkingHour - 1) + (24 - hours);
+            return remainingMinutes == 0 && minutes == 0 ? checkingHour + (24 - hours) : (checkingHour - 1) + (24 - hours);
         }
     }
     remainingHours = calcRemainingHours();
